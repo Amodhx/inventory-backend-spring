@@ -9,8 +9,8 @@ import org.example.inventorybackendspring.dto.SuperDTO;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDTO implements SuperDTO {
-    private int order_id;
-    private int customer_id;
+    private String order_id;
+    private String customer_id;
     private String customer_name;
     private String date;
     private String amount;
