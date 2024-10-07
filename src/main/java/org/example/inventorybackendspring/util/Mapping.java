@@ -1,7 +1,9 @@
 package org.example.inventorybackendspring.util;
 
 import org.example.inventorybackendspring.dto.impl.CustomerDTO;
+import org.example.inventorybackendspring.dto.impl.ItemDTO;
 import org.example.inventorybackendspring.entity.impl.CustomerEntity;
+import org.example.inventorybackendspring.entity.impl.ItemEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +24,15 @@ public class Mapping {
     }
     public List<CustomerDTO> toCustomerDTOList(List<CustomerEntity> customerEntityList){
         return modelMapper.map(customerEntityList,new TypeToken<List<CustomerDTO>>(){}.getType());
+    }
+
+    public ItemDTO toItemDTO(ItemEntity item){
+        return modelMapper.map(item, ItemDTO.class);
+    }
+    public ItemEntity toItemEntity(ItemDTO itemDTO){
+        return modelMapper.map(itemDTO, ItemEntity.class);
+    }
+    public List<ItemDTO> toItemDTOList(List<ItemEntity> list){
+        return modelMapper.map(list,new TypeToken<List<ItemDTO>>(){}.getType());
     }
 }

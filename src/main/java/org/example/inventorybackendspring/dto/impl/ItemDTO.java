@@ -4,11 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.inventorybackendspring.dto.SuperDTO;
+import org.example.inventorybackendspring.dto.status.ItemStatus;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemDTO implements SuperDTO {
+public class ItemDTO implements ItemStatus {
     private String item_id;
     private String product_name;
     private String buy_price;
