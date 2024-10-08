@@ -7,6 +7,7 @@ import org.example.inventorybackendspring.exception.DataNotFoundException;
 import org.example.inventorybackendspring.exception.DataPersistException;
 import org.example.inventorybackendspring.responce.ItemResponse;
 import org.example.inventorybackendspring.service.ItemService;
+import org.example.inventorybackendspring.util.GenerateId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/item")
+@CrossOrigin
 public class ItemController {
 
     @Autowired
@@ -44,12 +46,19 @@ public class ItemController {
     @PostMapping
     public ResponseEntity<Void> saveItem(@RequestBody() ItemDTO itemDTO){
         try {
+            itemDTO.setItem_id(GenerateId.getItemId());
             itemService.saveItem(itemDTO);
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (DataPersistException e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }catch (Exception e){
+            e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+//    @PatchMapping
+//    public ResponseEntity<Void> updateItem(@RequestBody() ItemDTO itemDTO){
+//
+//    }
 }

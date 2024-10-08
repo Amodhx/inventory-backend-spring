@@ -23,6 +23,6 @@ public class ItemEntity implements SuperEntity {
     private String qty;
     private String brand;
 
-    @ManyToMany(mappedBy = "items")
-    private List<OrderEntity> orders;
+    @OneToMany(mappedBy = "itemEntity")
+    private List<OrderItemEntity> ordersItem;
 }
