@@ -23,11 +23,6 @@ public class OrderEntity implements SuperEntity {
     @JoinColumn(name = "customer_id",nullable = false)
     private CustomerEntity customer;
 
-    @ManyToMany
-    @JoinTable(
-            name = "order_item_details",
-            joinColumns = @JoinColumn(name = "order_id"),
-            inverseJoinColumns = @JoinColumn(name = "item_id")
-    )
-    private List<ItemEntity> items;
+    @OneToMany(mappedBy = "order")
+    private List<OrderItemEntity> orderItems;
 }
