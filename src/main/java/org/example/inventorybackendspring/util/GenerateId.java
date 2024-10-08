@@ -9,6 +9,9 @@ public class GenerateId {
     public static String getItemId(){
         return "ITEM-"+UUID.randomUUID();
     }
+    public static String getOrderId(){
+        return "ORDER-"+UUID.randomUUID();
+    }
 
 
 }
