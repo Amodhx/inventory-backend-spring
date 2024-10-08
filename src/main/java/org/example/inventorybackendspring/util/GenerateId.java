@@ -12,6 +12,10 @@ public class GenerateId {
     public static String getOrderId(){
         return "ORDER-"+UUID.randomUUID();
     }
+    public static String getOrderItemID(){
+        return "ORDER_ITEM-"+UUID.randomUUID();
+    }
+
 
 
 }

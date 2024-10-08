@@ -3,9 +3,11 @@ package org.example.inventorybackendspring.util;
 import org.example.inventorybackendspring.dto.impl.CustomerDTO;
 import org.example.inventorybackendspring.dto.impl.ItemDTO;
 import org.example.inventorybackendspring.dto.impl.OrderDTO;
+import org.example.inventorybackendspring.dto.impl.Order_detailDTO;
 import org.example.inventorybackendspring.entity.impl.CustomerEntity;
 import org.example.inventorybackendspring.entity.impl.ItemEntity;
 import org.example.inventorybackendspring.entity.impl.OrderEntity;
+import org.example.inventorybackendspring.entity.impl.OrderItemEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,5 +48,8 @@ public class Mapping {
     }
     public List<OrderDTO> toOrderDTOList(List<OrderEntity> list){
         return modelMapper.map(list,new TypeToken<List<OrderDTO>>(){}.getType());
+    }
+    public OrderItemEntity toOrderItemEntity(Order_detailDTO orderDetailDTO){
+        return modelMapper.map(orderDetailDTO,OrderItemEntity.class);
     }
 }

@@ -9,16 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e19bb75d-f8c1-4129-ba05-a6e75af6acc6" name="Changes" comment="dao interfaces added">
+    <list default="true" id="e19bb75d-f8c1-4129-ba05-a6e75af6acc6" name="Changes" comment="order endpoint done">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/OrderItemEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/ItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/ItemEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/util/GenerateId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/util/GenerateId.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +191,7 @@
       <workItem from="1728187187773" duration="2035000" />
       <workItem from="1728189252868" duration="4373000" />
       <workItem from="1728203947901" duration="5866000" />
-      <workItem from="1728365430511" duration="2451000" />
+      <workItem from="1728365430511" duration="4086000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -241,7 +233,39 @@
       <option name="project" value="LOCAL" />
       <updated>1728190422162</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="item endpoint added">
+      <option name="closed" value="true" />
+      <created>1728378656856</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728378656856</updated>
+    </task>
+    <task id="LOCAL-00007" summary="order item entity added">
+      <option name="closed" value="true" />
+      <created>1728378672321</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728378672321</updated>
+    </task>
+    <task id="LOCAL-00008" summary="order item relationship added">
+      <option name="closed" value="true" />
+      <created>1728378683544</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728378683544</updated>
+    </task>
+    <task id="LOCAL-00009" summary="order endpoint done">
+      <option name="closed" value="true" />
+      <created>1728379598532</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728379598532</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +277,10 @@
     <MESSAGE value="entity classes done" />
     <MESSAGE value="dto classes added" />
     <MESSAGE value="dao interfaces added" />
-    <option name="LAST_COMMIT_MESSAGE" value="dao interfaces added" />
+    <MESSAGE value="item endpoint added" />
+    <MESSAGE value="order item entity added" />
+    <MESSAGE value="order item relationship added" />
+    <MESSAGE value="order endpoint done" />
+    <option name="LAST_COMMIT_MESSAGE" value="order endpoint done" />
   </component>
 </project>
