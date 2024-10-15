@@ -1,13 +1,17 @@
 package org.example.inventorybackendspring.controller;
 
+import org.example.inventorybackendspring.customStatusCodes.SelectedCustomerErrorStatus;
 import org.example.inventorybackendspring.customStatusCodes.SelectedItemErrorStatus;
 import org.example.inventorybackendspring.dto.impl.ItemDTO;
 import org.example.inventorybackendspring.dto.status.ItemStatus;
 import org.example.inventorybackendspring.exception.DataNotFoundException;
 import org.example.inventorybackendspring.exception.DataPersistException;
+import org.example.inventorybackendspring.responce.CustomerResponse;
 import org.example.inventorybackendspring.responce.ItemResponse;
 import org.example.inventorybackendspring.service.ItemService;
 import org.example.inventorybackendspring.util.GenerateId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +23,7 @@ import java.util.List;
 @RequestMapping(path = "api/v1/item")
 @CrossOrigin
 public class ItemController {
+    Logger logger = LoggerFactory.getLogger(ItemController.class);
 
     @Autowired
     ItemService itemService;
@@ -48,6 +53,7 @@ public class ItemController {
         try {
             itemDTO.setItem_id(GenerateId.getItemId());
             itemService.saveItem(itemDTO);
+            logger.info("Item values saved "+ itemDTO.getItem_id());
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (DataPersistException e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -57,8 +63,22 @@ public class ItemController {
         }
     }
 
-//    @PatchMapping
-//    public ResponseEntity<Void> updateItem(@RequestBody() ItemDTO itemDTO){
-//
-//    }
+    @PatchMapping
+    public ItemStatus updateItem(@RequestBody() ItemDTO itemDTO){
+        if (itemDTO != null){
+            try {
+                itemService.updateCustomer(itemDTO);
+
+                logger.info("Customer Data updated"+itemDTO.getItem_id());
+                return new ItemResponse(HttpStatus.CREATED);
+            }catch (DataNotFoundException e){
+                return new ItemResponse(HttpStatus.BAD_REQUEST);
+            }catch (Exception e){
+                e.printStackTrace();
+                return new ItemResponse(HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+        }else {
+            return new SelectedItemErrorStatus(3,"Customer Values are Null");
+        }
+    }
 }

@@ -20,7 +20,7 @@ public class CustomerEntity implements SuperEntity {
     private String address;
     private String contact_number;
     private String date;
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     private List<OrderEntity> orders;
 
 }

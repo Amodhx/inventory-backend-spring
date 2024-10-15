@@ -23,6 +23,6 @@ public class OrderEntity implements SuperEntity {
     @JoinColumn(name = "customer_id",nullable = false)
     private CustomerEntity customer;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order" ,cascade = CascadeType.ALL)
     private List<OrderItemEntity> orderItems;
 }

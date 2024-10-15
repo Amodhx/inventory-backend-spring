@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 @Table(name = "order_items")
 public class OrderItemEntity {
     @Id
-    private String id;
+    private String orderItem_id;
 
     @ManyToOne
-    @JoinColumn(name = "order_id",nullable = false)
+    @JoinColumn(name = "order_id")
     private OrderEntity order;
 
     @ManyToOne
-    @JoinColumn(name = "item_id",nullable = false)
-    private ItemEntity itemEntity;
+    @JoinColumn(name = "item_id")
+    private ItemEntity item;
     private String qty;
     private String price;
 }

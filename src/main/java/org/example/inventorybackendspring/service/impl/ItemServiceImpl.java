@@ -3,6 +3,8 @@ package org.example.inventorybackendspring.service.impl;
 import jakarta.transaction.Transactional;
 import org.example.inventorybackendspring.dao.ItemDAO;
 import org.example.inventorybackendspring.dto.impl.ItemDTO;
+import org.example.inventorybackendspring.entity.impl.CustomerEntity;
+import org.example.inventorybackendspring.entity.impl.ItemEntity;
 import org.example.inventorybackendspring.exception.DataNotFoundException;
 import org.example.inventorybackendspring.exception.DataPersistException;
 import org.example.inventorybackendspring.service.ItemService;
@@ -45,6 +47,21 @@ public class ItemServiceImpl implements ItemService {
             itemDAO.save(mapping.toItemEntity(itemDTO));
         }else {
             throw new DataPersistException("Cant Save Item Data");
+        }
+    }
+
+    @Override
+    public void updateCustomer(ItemDTO itemDTO) {
+        if (itemDAO.existsById(itemDTO.getItem_id())) {
+            ItemEntity referenceById = itemDAO.getReferenceById(itemDTO.getItem_id());
+            referenceById.setBrand(itemDTO.getBrand());
+            referenceById.setQty(itemDTO.getQty());
+            referenceById.setBuy_price(itemDTO.getBuy_price());
+            referenceById.setSel_price(itemDTO.getSel_price());
+            referenceById.setProduct_name(itemDTO.getProduct_name());
+            referenceById.setExpire_date(itemDTO.getExpire_date());
+        }else {
+            throw new DataNotFoundException("Cant Find Customer to Update");
         }
     }
 }

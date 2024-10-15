@@ -11,6 +11,26 @@
   <component name="ChangeListManager">
     <list default="true" id="e19bb75d-f8c1-4129-ba05-a6e75af6acc6" name="Changes" comment="order endpoint done">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/dto/impl/OrderAndOrderDetailsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/service/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/HealthCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/HealthCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/TransactionalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/controller/TransactionalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/dto/status/ItemStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/dto/status/ItemStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/CustomerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/CustomerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/ItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/ItemEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/OrderItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/entity/impl/OrderItemEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/inventorybackendspring/service/impl/ItemServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +212,11 @@
       <workItem from="1728189252868" duration="4373000" />
       <workItem from="1728203947901" duration="5866000" />
       <workItem from="1728365430511" duration="4086000" />
+      <workItem from="1728404649834" duration="2251000" />
+      <workItem from="1728447785929" duration="12353000" />
+      <workItem from="1728624172024" duration="600000" />
+      <workItem from="1728704034892" duration="10000" />
+      <workItem from="1728962347203" duration="3752000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
